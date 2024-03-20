@@ -1,0 +1,9 @@
+<div>
+    <h1>List of Products</h1>
+    <input type="text" [(ngModel)]="searchTerm" (keyup)="applyFilter()" placeholder="Search...">
+    <ul>
+        @for (filteredData of filteredData; track filteredData.id) {
+            <li>{{filteredData.title}}</li>
+        }
+    </ul>
+</div>
